@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Biolink</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .banner {
+      background: #7c3aed;
+      color: black;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 0 20px #a855f7;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 30px;
+      border: 4px solid #a855f7;
+      box-shadow: 0 0 10px #a855f7;
+    }
+
+    h1 {
+      margin-top: 15px;
+      font-size: 2em;
+      color: #c084fc;
+      text-shadow: 0 0 10px #c084fc, 0 0 20px #a855f7;
+    }
+
+    p {
+      color: #c084fc;
+      text-shadow: 0 0 10px #c084fc, 0 0 20px #a855f7;
+    }
+
+    .link {
+      margin: 10px auto;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(3px);
+      width: 250px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: darkred;
+      font-weight: bold;
+      transition: background 0.3s;
+      display: block;
+    }
+
+    .link:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .glitter {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .glitter span {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #c084fc;
+      border-radius: 50%;
+      animation: sparkle 2s infinite ease-in-out;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Discord banner -->
+  <div class="banner">discord.gg/mp3</div>
+
+  <!-- Profile image -->
+  <img class="profile-pic" src="https://via.placeholder.com/150" alt="Profile Picture">
+
+  <h1>Crucified Private</h1>
+  <p>@few</p>
+
+  <a class="link" href="https://discord.gg/mp3" target="_blank">Discord</a>
+  <a class="link" href="https://instagram.com/spilt.pills" target="_blank">Instagram</a>
+  <a class="link" href="https://vrchat.com/home/group/grp_39a705b1-8e48-4035-8416-47b87ad2ac81" target="_blank">VRC Group</a>
+
+  <div class="glitter" id="glitter"></div>
+
+  <script>
+    const glitterContainer = document.getElementById('glitter');
+    for (let i = 0; i < 200; i++) {
+      const dot = document.createElement('span');
+      dot.style.left = `${Math.random() * 100}%`;
+      dot.style.top = `${Math.random() * 100}%`;
+      dot.style.animationDuration = `${1 + Math.random() * 2}s`;
+      glitterContainer.appendChild(dot);
+    }
+  </script>
+</body>
+</html>
